@@ -1,0 +1,29 @@
+{
+  "name": "eawp-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ragtazoy/eawp-api.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ragtazoy/eawp-api/issues"
+  },
+  "homepage": "https://github.com/Ragtazoy/eawp-api#readme",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "firebase-admin": "^11.5.0",
+    "moment": "^2.29.4",
+    "mysql2": "^3.2.0",
+    "node-cron": "^3.0.2",
+    "nodemon": "^2.0.22"
+  }
+}
