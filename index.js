@@ -5,6 +5,7 @@ const bodyParser = require('body-parser')
 const mysql = require('mysql2')
 app.use(cors())
 app.use(bodyParser.json())
+const port = 81
 
 //==================================================================================================================================================//
 // Notification 
@@ -582,6 +583,6 @@ const scheduler = require('./scheduler');
 scheduler.initCron()
 
 
-app.listen(process.env.PORT || 12123, function () {
-   console.log('CORS-enabled web server listening on port 81')
+app.listen(port, function () {
+   console.log('CORS-enabled web server listening on port', port)
 });
