@@ -36,8 +36,6 @@ const absent = async () => {
    ]).then(() => {
       // Filter results using scheduling and work_attendance
       const filterScheduling = scheduling.filter(sched => !work_attendance.some(att => att.emp_id === sched.emp_id));
-      console.log('filterScheduling:', filterScheduling);
-
       if (filterScheduling.length !== 0) {
 
          new Promise((resolve, reject) => {
@@ -143,27 +141,27 @@ const evaluate = async () => {
 module.exports = {
    initCron: () => {
       // Test
-      cron.schedule('* * * * *', function () {
-         // console.log('running a task Test');
-         // absent()
-      });
+      // cron.schedule('* * * * *', function () {
+      //    console.log('running a task Test');
+      //    absent()
+      // });
 
       // Run every day at 18:01
       cron.schedule('1 18 * * *', function () {
          console.log('running a task every day at 18:01');
-         // absent()
+         absent()
       });
 
       // Run every day at 23:01
       cron.schedule('1 23 * * *', function () {
          console.log('running a task every day at 23:01');
-         // checkOut()
+         checkOut()
       });
 
       // Run every day-of-month 1 at 00:00
       cron.schedule('0 0 1 * *', function () {
          console.log('running a task every day-of-month 1');
-         // evaluate()
+         evaluate()
       });
    }
 }

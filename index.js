@@ -67,7 +67,7 @@ app.get('/read/dept', (req, res) => {
 })
 
 app.get('/read/empdept', (req, res) => {
-   db.query('SELECT e.emp_id ,e.nname, e.job_title, d.dept_name FROM employee e JOIN department d WHERE e.emp_id = d.emp_id',
+   db.query("SELECT e.emp_id ,e.nname, e.job_title, d.dept_name FROM employee e JOIN department d WHERE e.emp_id = d.emp_id AND e.job_title != 'manager'",
       (err, results) => {
          err ? console.log('/read/empdept ' + err) : res.json(results)
       }
