@@ -5,7 +5,7 @@ const bodyParser = require('body-parser')
 const mysql = require('mysql2')
 app.use(cors())
 app.use(bodyParser.json())
-const port = 81
+const port = 12123
 
 //==================================================================================================================================================//
 // Notification 
